@@ -1,4 +1,5 @@
 require 'active_record'
+require 'pry'
 
 ActiveRecord::Base.establish_connection(
     adapter: "sqlite3",
@@ -12,3 +13,13 @@ sql = <<-SQL
     )
     SQL
 ActiveRecord::Base.connection.execute(sql) 
+
+insert_meal_recipe = <<-SQL
+    INSERT INTO recipes(name, procedure) VALUES ("Ugali", "flour");
+    SQL
+
+ActiveRecord::Base.connection.execute(insert_meal_recipe)
+
+class Recipe < ActiveRecord::Base
+end
+binding.pry
