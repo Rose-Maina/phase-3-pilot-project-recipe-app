@@ -60,7 +60,12 @@ li a:hover {
   background: #fff;
   padding: 0 10px;
 }
-.column {
+.col {
+  width:300px;
+  /* height: 10px; */
+
+}
+.column { 
   float: none;
   width: 25%;
   padding: 0 10px;

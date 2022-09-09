@@ -9,7 +9,7 @@ const Home = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState(' ');
-  const [query, setQuery] = useState('banana')
+  const [query, setQuery] = useState('cherry')
 
   useEffect(() => {
     getRecipes();
@@ -32,35 +32,26 @@ const Home = () => {
     setSearch(' ');
   }
 
+  let mealRecipes = recipes.map((recipe) => (<Recipe
+      key={recipe.recipe.label}
+      title={recipe.recipe.label}
+      image={recipe.recipe.image}
+      ingredients={recipe.recipe.ingredients}/>))
+
   return (
     <div className="Home">
-      <form
-        className="search-form"
-        onSubmit={getSearch}>
-        <input
-          className="search-bar"
-          type="text"
-          value={search}
-          onChange={updateSearch}/>
-        <button
-          className="search-button"
-          type="submit">
-            Search
-          </button>
+      <form className="search-form" onSubmit={getSearch}>
+        <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
+        <button className="search-button" type="submit"> Search </button>
       </form>
     <div className ="recipes-container">
       <div className="inner-recipes-container">
-      {recipes.map(recipe => (
-        <Recipe
-        key={recipe.recipe.label}
-        title={recipe.recipe.label}
-        image={recipe.recipe.image}
-        ingredients={recipe.recipe.ingredients} />
-      ))}
+        <div className="row">
+            {mealRecipes}
       </div>
-    </div>
-    </div>
-  );
-};
+  </div>
+  </div>
+  </div>
+  )};
 
 export default Home;
