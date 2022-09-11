@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Recipe from "./Recipe";
-// import "./App.css";
 
 const Home = () => {
 
@@ -48,6 +47,10 @@ const Home = () => {
       <div className="inner-recipes-container">
         <div className="row">
             {mealRecipes}
+      </div>
+      <div class="footer">
+        <p>Copyright &copy; myrecipes.com</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSEo__EXpP_zd581Ds_X9HwwbXg_fRPIo6A&usqp=CAU" alt="logo" />     
       </div>
   </div>
   </div>
