@@ -10,7 +10,7 @@ function UserReviews() {
     });
 
     useEffect(() => {
-        fetch ("http://localhost:9292/comments")
+        fetch ("https://afternoon-hollows-30320.herokuapp.com/comments")
             .then ((response) => response.json())
             .then ((userReviews) => setUserReviews
               (userReviews));
@@ -25,14 +25,14 @@ function UserReviews() {
     function handleNewUserReview(e) {
         e.preventDefault();
 
-        fetch("http://localhost:9292/comments",{
+        fetch("https://afternoon-hollows-30320.herokuapp.com/comments"),{
           method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
                 username: formData.username,
                 comment: formData.comment
             }),
-        })
+        }
          .then ((response) => response.json())
          .then((newReviewData) => {
                 console.log(newReviewData)
@@ -44,6 +44,7 @@ function UserReviews() {
             [e.target.username]: e.target.value,
         });
     }
+    
     return (
         <>
             <form onSubmit={handleNewUserReview}>
