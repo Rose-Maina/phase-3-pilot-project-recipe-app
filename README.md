@@ -1,5 +1,10 @@
 # My Recipes
+<<<<<<< HEAD
 The application, "my-recipe", is the ultimate cooking application that helps the user access numerous recipes depending on their preferred ingredient. Searching for any ingredient gives them access to numerous recipes they could access and allows them to make and delete comments on any of the recipes they ried out.
+=======
+The application, "my-recipe", is the ultimate cooking application that helps the user access numerous recipes depending on their preferred ingredient. Searching for any ingredient gives them access to numerous recipes they could access and allows them to make and delete comments on any of the recipes they tried out.
+This React application was supported by a Sinatra Backend API whose link is: https://afternoon-hollows-30320.herokuapp.com/comments. The respective repository for this backend application is https://github.com/Rose-Maina/phase-3-sinatra-react-project
+>>>>>>> bb160cadb4e0fc4620069ac91b81ee53864efa98
 
 # Author
 Rose Maina
@@ -26,4 +31,8 @@ Ruby
 Sinatra Backend
 
 # License
+<<<<<<< HEAD
 MIT LIcense Copyright (C) Rose Maina
+=======
+MIT LIcense Copyright (C) Rose Maina
+>>>>>>> bb160cadb4e0fc4620069ac91b81ee53864efa98
